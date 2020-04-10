@@ -1,0 +1,21 @@
+<%=form_for @employee do |f|%>
+        <%=f.label :img_url%>
+        <%=f.text_field :img_url%>
+        <%=f.label :first_name%>
+        <%=f.text_field :first_name%> 
+        <br>
+        <%=f.label :last_name%>
+        <%=f.text_field :last_name%> 
+        <br>
+        <%=f.label :alias%>
+        <%=f.text_field :alias%> 
+        <br>
+        <%=f.label :title%>
+        <%=f.text_field :title%> 
+        <br>
+        <%=f.label :office%>
+        <%=f.text_field :office%> 
+        <br>
+        <%=f.select :dog_id, options_from_collection_for_select(Dog.all,"id","name")%>
+        <%=f.submit%>
+<%end%>
