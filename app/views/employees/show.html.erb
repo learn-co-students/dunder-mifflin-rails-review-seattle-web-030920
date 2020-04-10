@@ -1,0 +1,10 @@
+<h1>Profile for <%= @employee.full_name %></h1><br>
+<% if @employee.img_url %>
+    <%= image_tag @employee.img_url %>
+<% end %>
+<h3>Alias: <%= @employee.alias %></h3><br>
+<h3>Title: <%= @employee.title %></h3><br>
+<h3>Office: <%= @employee.office %></h3><br>
+<h3>Dog: <%= link_to @employee.dog.name, @employee.dog %></h3><br>
+
+<%= link_to "Edit Employee", edit_employee_path(@employee) %>
